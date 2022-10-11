@@ -1,0 +1,15 @@
+tasks:
+  - init: |
+      python -m venv todoapp-venv
+      source todoapp-venv/bin/activate
+      pip install --upgrade pip wheel setuptools
+      pip install -r requirements.txt
+      python manage.py migrate
+  - command: |
+      source todoapp-venv/bin/activate
+      python manage.py runserver
+  
+ports:
+  - port: 8000
+    visibility: private
+    onOpen: open-preview
