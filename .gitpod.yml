@@ -5,7 +5,7 @@ tasks:
     pip install --upgrade pip wheel setuptools
     pip install -r requirements.txt
     python manage.py migrate
-  - comand: |
+  - command: |
     source todo-app-venv/bin/activate
     python manage.py runserver
 
