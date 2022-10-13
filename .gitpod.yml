@@ -5,11 +5,11 @@ tasks:
       pip install --upgrade pip wheel setuptools
       pip install -r requirements.txt
       python manage.py migrate
-  - command: |
+    command: |
       pyenv activate todo-app
       python manage.py runserver
 
 ports: 
   - port: 8000
     visibility: public
-    onOpen: open-preview
+    onOpen: open-browser
