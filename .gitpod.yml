@@ -1,12 +1,9 @@
 tasks:
   - init: |
-      pyenv virtualenv todo-app
-      pyenv activate todo-app
       pip install --upgrade pip wheel setuptools
       pip install -r requirements.txt
       python manage.py migrate
     command: |
-      pyenv activate todo-app
       python manage.py runserver
 
 ports: 
